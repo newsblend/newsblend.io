@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Newsblend - stay on top of your business right in your Slack & more</title>
+    <link rel="icon" href="img/icon.png">
+    <link rel="stylesheet" href="css/pico.min.css">
+    <style>
+      section {
+        margin: 0;
+        padding: 3em 0;
+      }
+
+      .centered {
+        display: flex;
+        justify-content: center;
+      }
+
+      .slider {
+        display: inline;
+        text-indent: 8px;
+      }
+      .slider span {
+        animation: topToBottom 10s linear infinite 0s;
+        color: var(--h1-color);
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+      }
+      .slider span:nth-child(2) {
+        animation-delay: 2.5s;
+      }
+      .slider span:nth-child(3) {
+        animation-delay: 5s;
+      }
+      .slider span:nth-child(4) {
+        animation-delay: 7.5s;
+      }
+
+      @keyframes topToBottom{
+        0% { opacity: 0; }
+        0% { opacity: 0; -moz-transform: translateY(-50px); }
+        5% { opacity: 1; -moz-transform: translateY(0px); }
+        25% { opacity: 1; -moz-transform: translateY(0px); }
+        30% { opacity: 0; -moz-transform: translateY(50px); }
+        80% { opacity: 0; }
+        100% { opacity: 0; }
+      }
+    </style>
+  </head>
+  <body>
+    <div style="background-color: #00b382" data-theme="dark">
+      <div style="padding: 1em 0; background-color: rgba(0, 0, 0, .2)">
+        <nav class="container">
+          <ul>
+            <li>
+              <img src="img/logo-white.svg" style="height: 1.35em">
+            </li>
+          </ul>
+          <ul style="gap: 1.5em">
+            <li>
+              <a href="#" class="contrast">Pricing</a>
+            </li>
+            <li>
+              <a href="#" class="contrast">Sign in</a>
+            </li>
+            <li>
+              <a href="#" role="button" class="contrast" style="padding: .5em 1em">Get started</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <main class="container">
+
+        <section>
+          <div class="grid">
+            <div>
+              <h1 style="position: relative; text-align: left">
+                <strong>
+                Stay on top of your
+                <div class="slider">
+                  <span>industry</span>
+                  <span>brands</span>
+                  <span>competition</span>
+                  <span>leads</span>
+                </div>
+                <br>
+                right where you work
+                </strong>
+              </h1>
+              <p style="margin: 3em 0; color: #fff">
+                Stop plowing through endless bookmarks and let Newsblend deliver news alerts, social media posts, and product reviews right to your Slack, email, or wherever your team works.
+              </p>
+            </div>
+            <div class="centered">
+              <img src="img/pulse.svg" style="width: 200px">
+            </div>
+          </div>
+          <div class="grid">
+            <div>
+              <p style="color: #eee; margin: 0; text-align: center">
+                <a href="#" role="button" class="secondary" style="margin-bottom: .3em">Start your free trial</a>
+                <br>
+                <small>No credit card required.</small>
+              </p>
+            </div>
+            <div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div>
+      <section class="container">
+        <div class="grid">
+          <div class="centered">
+            <img src="img/ratings.svg" style="width: 150px">
+          </div>
+          <div>
+            <h2>Track reviews everywhere.</h2>
+            <p>
+            Steve Holt! I don't criticize you! And if you're worried about criticism, sometimes a diet is the best defense. Now, when you do this without getting punched in the chest, you'll have more fun. He'll want to use your yacht, and I don't want this thing smelling like fish.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div style="background-color: var(--table-row-stripped-background-color)">
+      <section class="container">
+        <div class="grid">
+          <div>
+            <h2>Automatic notifications for the stuff that matters.</h2>
+            <p>
+            There's so many poorly chosen words in that sentence. I'm a monster. I'm half machine. I'm a monster. Did you enjoy your meal, Mom? You drank it fast enough. No, I did not kill Kitty. However, I am going to oblige and answer the nice officer's questions because I am an honest man with no secrets to hide.
+            </p>
+          </div>
+          <div class="centered">
+            <img src="img/alert.svg" style="width: 150px">
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div>
+      <section class="container">
+        <div class="grid">
+          <div class="centered">
+            <img src="img/office.svg" style="width: 150px">
+          </div>
+          <div>
+            <h2>Without leaving your turf.</h2>
+            <p>
+            Steve Holt! I don't criticize you! And if you're worried about criticism, sometimes a diet is the best defense. Now, when you do this without getting punched in the chest, you'll have more fun. He'll want to use your yacht, and I don't want this thing smelling like fish.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div style="background-color: #00b382; text-align: center" data-theme="dark">
+      <section class="container">
+        <h4 style="color: #fff">
+          Join billions of companies using Newsblend now.
+        </h4>
+
+        <p style="color: #fff; margin: 2em 0">
+          Try Newsblend free for 14 days, and only start paying if you love it.
+        </p>
+
+        <a href="#" role="button" class="secondary" style="margin-bottom: .3em">Start free trial</a>
+      </section>
+    </div>
+
+    <nav class="container" style="margin-top: 3em; margin-bottom: 2em">
+      <ul>
+        <strong>
+          Newsblend
+        </strong>
+      </ul>
+      <ul style="gap: 2em">
+        <li><a href="#" class="secondary">Pricing</a></li>
+        <li><a href="mailto:support@newsblend.io" class="secondary">Support</a></li>
+        <li><a href="#" class="secondary">Privacy Policy</a></li>
+        <li><a href="#" class="secondary">Legal</a></li>
+      </ul>
+    </nav>
+
+    </main>
+  </body>
+</html>

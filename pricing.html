@@ -3,10 +3,151 @@ layout: default
 title: Newsblend - Pricing
 ---
 
-<div class="container">
-  <div class="grid">
-    <article>Hi</article>
-    <article>Whats</article>
-    <article>Up</article>
+<main class="container" style="padding-bottom: 0">
+  <hgroup style="text-align: center; opacity: .8">
+    <h2>
+      Find the right plan for your needs.
+    </h2>
+    <p>
+      And save 20 % with annual billing.
+    </p>
+  </hgroup>
+
+  <label for="annual" style="text-align: center; margin: 0">
+    <strong>Billing cycle</strong>:<br>
+    Monthly
+    <input type="checkbox" id="annual" name="annual" role="switch" checked style="margin: 0 .25em">
+    Annual
+  </label>
+
+  <div class="grid pricing">
+
+    <article>
+      <header>
+        <h3 style="color: #fff">Personal</h3>
+      </header>
+      <main>
+        <h2 style="padding: 0.75em 0 0.9em; font-weight: normal; opacity: .6">Free</h2>
+        <hr>
+        <ul>
+          <li><strong>5 sources</strong></li>
+          <li>20 notifications / day</li>
+        </ul>
+      </main>
+      <footer>
+        <button class="secondary outline">Sign up</button>
+      </footer>
+    </article>
+
+    <article>
+      <header>
+        <h3>Small</h3>
+      </header>
+      <main>
+        <hgroup>
+          <h1>
+            <span style="font-size: 60%">$ </span>
+            <span class="animated price">19</span>
+            <span style="font-size: 60%; font-weight: normal; color: var(--muted-color)"> / mo</span></h1>
+          <p>billed <span class="animated cycle">annually</span></p>
+        </hgroup>
+        <hr>
+        <ul>
+          <li><strong>25 sources</strong></li>
+          <li>100 notifications / day</li>
+          <li>Email notifications</li>
+          <li>Feed export</li>
+        </ul>
+      </main>
+      <footer>
+        <button class="secondary">Start free trial</button>
+      </footer>
+    </article>
+
+    <article>
+      <header>
+        <h3>Pro</h3>
+      </header>
+      <main>
+        <hgroup>
+          <h1>
+            <span style="font-size: 60%">$ </span>
+            <span class="animated price">69</span>
+            <span style="font-size: 60%; font-weight: normal; color: var(--muted-color)"> / mo</span></h1>
+          <p>billed <span class="animated cycle">annually</span></p>
+        </hgroup>
+        <hr>
+        <ul>
+          <li><strong>100 sources</strong></li>
+          <li>250 notifications / day</li>
+          <li>Email notifications</li>
+          <li>Feed export</li>
+          <li>Webhooks</li>
+        </ul>
+      </main>
+      <footer>
+        <button class="secondary">Start free trial</button>
+      </footer>
+    </article>
+
+    <article>
+      <header>
+        <h3>Business</h3>
+      </header>
+      <main>
+        <hgroup>
+          <h1>
+            <span style="font-size: 60%">$ </span>
+            <span class="animated price">249</span>
+            <span style="font-size: 60%; font-weight: normal; color: var(--muted-color)"> / mo</span></h1>
+          <p>billed <span class="animated cycle">annually</span></p>
+        </hgroup>
+        <hr>
+        <ul>
+          <li><strong>250 sources</strong></li>
+          <li>1,000 notifications / day</li>
+          <li>Email notifications</li>
+          <li>Feed export</li>
+          <li>Webhooks</li>
+          <li>API access</li>
+        </ul>
+      </main>
+      <footer>
+        <button class="secondary">Start free trial</button>
+      </footer>
+    </article>
+
   </div>
-</div>
+</main>
+
+<script>
+  const prices = {
+    true: ['19', '69', '249'],
+    false: ['24', '89', '319'],
+  }
+  const cycles = {
+    true: 'annually',
+    false: 'monthly',
+  }
+
+  const toggle = document.getElementById('annual');
+  const priceElements = document.querySelectorAll('span.price');
+  const cycleElements = document.querySelectorAll('span.cycle');
+
+  toggle.addEventListener('change', (event) => {
+    const currentPrices = prices[event.target.checked];
+    const cycleStr = cycles[event.target.checked];
+
+    for (const [idx, priceEl] of priceElements.entries()) {
+      const cycleEl = cycleElements[idx]
+      priceEl.classList.add('swapping');
+      cycleEl.classList.add('swapping');
+      setTimeout(() => {
+        priceEl.innerHTML = currentPrices[idx];
+        cycleEl.innerHTML = cycleStr;
+        priceEl.classList.remove('swapping');
+        cycleEl.classList.remove('swapping');
+      }, 250);
+    }
+  });
+</script>

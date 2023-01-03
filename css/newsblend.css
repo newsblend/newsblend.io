@@ -1,3 +1,16 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+body > main {
+  flex: 1 0 auto;
+}
+
 section {
   margin: 0;
   padding: 3em 0;
@@ -43,6 +56,14 @@ section {
   100% { opacity: 0; }
 }
 
+.animated {
+  transition: all .3s ease-in-out;
+}
+
+.animated.swapping {
+  opacity: 0;
+}
+
 .hero-image {
   width: 500px;
   border-radius: 10px;
@@ -71,12 +92,16 @@ section {
 }
 
 .segments > div > section > figure > img {
-  width: 175px;
+  width: 200px;
 }
 
 .segments > div > section > div {
   width: 350px;
   flex-grow: 1;
+}
+
+.segments > div > section > div > h2 {
+  margin-bottom: 1em;
 }
 
 .segments > div:nth-child(odd) {
@@ -85,4 +110,76 @@ section {
 
 .segments > div:nth-child(odd) > section {
   flex-direction: row-reverse;
+}
+
+.integrations {
+  padding-top: 1em;
+  text-align: center;
+}
+
+.integrations img {
+  border-radius: 5px;
+  height: 35px;
+  margin: 0 10px;
+  filter: grayscale(50%);
+  transition: .25s ease-in-out;
+}
+
+.integrations img:hover {
+  filter: none;
+}
+
+.pricing {
+  text-align: center;
+}
+
+.pricing article {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing header {
+  background-color: #00b382;
+  padding: 1em .5em;
+  margin-bottom: 0;
+}
+
+.pricing header h3 {
+  color: #fff;
+  padding: 0;
+  margin: 0;
+}
+
+.pricing main {
+  margin: 1em -1em;
+  flex-grow: 1;
+}
+
+.pricing hr {
+  margin-bottom: 1em;
+}
+
+.pricing footer {
+  padding: 1em .5em;
+  margin-top: 0;
+}
+
+.pricing footer button {
+  padding: .5em;
+  margin: 0 auto;
+  max-width: 12em;
+}
+
+.pricing h1, h2, h3 {
+  margin: 0;
+}
+
+.pricing ul {
+  padding: 0;
+  margin: 0;
+}
+
+.pricing li {
+  list-style: none;
 }

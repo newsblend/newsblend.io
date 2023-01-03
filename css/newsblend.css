@@ -165,10 +165,11 @@ section {
   margin-top: 0;
 }
 
-.pricing footer button {
+.pricing footer a {
+  width: 100%;
+  max-width: 12em;
   padding: .5em;
   margin: 0 auto;
-  max-width: 12em;
 }
 
 .pricing h1, h2, h3 {
